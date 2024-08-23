@@ -82,7 +82,7 @@ function incrementScore(player) {
             updateScore(2, score2);
         }
     } else if (player === 2) {
-        score2+=1;
+        score2+=11;
         updateScore(2, score2);
         if (score2 >= 11 && score2 - score1 >= 2) {
             incrementSet(2,4);
@@ -152,8 +152,53 @@ function incrementSet(player, set) {
     totalsets++;
 }
 
+function flipScore(){
+    let temp = score1;
+    score1 = score2;
+    score2 = temp;
+    updateScore(1, score1);
+    updateScore(2, score2);
+    //flip sets
+    for (let i = 1; i < totalsets; i++) {
+        if (results[i-1] === 1) {
+            document.getElementById(`set${1}-${i}`).style = "background-color: red";
+            document.getElementById(`set${2}-${i}`).style = "background-color: green";
+            results[i-1]=2;
+            
+
+
+        } else if (results[i-1] === 2) {
+            document.getElementById(`set${1}-${i}`).style = "background-color: green";
+            document.getElementById(`set${2}-${i}`).style = "background-color: red";
+            results[i-1]=1;
+            
+        }   
+        
+
+    }
+    if(document.getElementById("p1").innerText==="Player 1"){
+        document.getElementById("p1").innerText="Player 2";
+    }
+    else{
+        document.getElementById("p1").innerText="Player 1";
+    }
+    if(document.getElementById("p2").innerText==="Player 2"){
+        document.getElementById("p2").innerText="Player 1";
+
+    }else{
+        document.getElementById("p2").innerText="Player 2";
+    }
+
+}
+
 
 speechRecognition.addEventListener('end', () => {
     speechRecognition.start();
 }); 
 
+//listen for space bar
+document.addEventListener('keydown', (event) => {
+    if (event.code === 'Space') {
+        flipScore();
+    }
+});
