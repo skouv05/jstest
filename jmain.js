@@ -2,12 +2,14 @@ let car = { make: 'Toyota', model: 'Camry', year: 2020 };
 let person = { name: 'John', age: 30, city: 'New York' };
 let product = { name: 'iPhone', price: 1000, category: 'Electronics' };
 
+
 let personlist = [person.name, "Bente", "Jørn"];
 let carlist = [car.make, "Audi", "Ford"];
+
 let totalsets=1;
 let timestamp = new Date();
-let p1="Jacob";
-let p2="Laurits";
+let p1="En";
+let p2="To";
 document.getElementById("p1").innerText = p1;
     document.getElementById("p2").innerText=p2;
 function printList() {
@@ -149,3 +151,4 @@ function incrementSet(player, set) {
 speechRecognition.addEventListener('end', () => {
     speechRecognition.start();
 }); 
+
