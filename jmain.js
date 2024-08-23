@@ -8,7 +8,7 @@ let carlist = [car.make, "Audi", "Ford"];
 
 let totalsets=1;
 let timestamp = new Date();
-let p1="en";
+let p1="haoulsfajls";
 let p2="to";
 document.getElementById("p1").innerText = p1;
     document.getElementById("p2").innerText=p2;
