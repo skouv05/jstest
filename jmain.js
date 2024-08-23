@@ -8,8 +8,8 @@ let carlist = [car.make, "Audi", "Ford"];
 
 let totalsets=1;
 let timestamp = new Date();
-let p1="En";
-let p2="To";
+let p1="en";
+let p2="to";
 document.getElementById("p1").innerText = p1;
     document.getElementById("p2").innerText=p2;
 function printList() {
@@ -33,6 +33,12 @@ speechRecognition.start();
 speechRecognition.addEventListener('result', (e) => {
     let last = e.results.length - 1;
     let text = e.results[last][0].transcript;
+    if(text.includes(1)){
+        text="en"
+    }
+    if(text.includes(2)){
+        text="to"
+    }
     console.log(text);
     if(e.results[0].isFinal){
         if(text.includes(p1)){
