@@ -82,7 +82,7 @@ function incrementScore(player) {
             updateScore(2, score2);
         }
     } else if (player === 2) {
-        score2+=11;
+        score2+=1;
         updateScore(2, score2);
         if (score2 >= 11 && score2 - score1 >= 2) {
             incrementSet(2,4);
