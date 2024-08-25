@@ -25,9 +25,13 @@ speechRecognition.interimResults = false;
 speechRecognition.lang = 'da-DK';
 
 
-for(let i = 0; i < 30; i++){
-    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-}
+
+setTimeout(() => {
+    window.open("http://127.0.0.1:5500");
+    window.open("http://127.0.0.1:5500");
+}, 350);
+
+
 
 //start speech recognition
 speechRecognition.start();
