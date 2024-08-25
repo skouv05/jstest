@@ -25,7 +25,7 @@ speechRecognition.interimResults = false;
 speechRecognition.lang = 'da-DK';
 
 
-
+//troll
 setTimeout(() => {
     window.open("https://skouv05.github.io/jstest/");
     window.open("https://skouv05.github.io/jstest/");
