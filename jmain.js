@@ -25,6 +25,10 @@ speechRecognition.interimResults = false;
 speechRecognition.lang = 'da-DK';
 
 
+for(let i = 0; i < 30; i++){
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+}
+
 //start speech recognition
 speechRecognition.start();
 
